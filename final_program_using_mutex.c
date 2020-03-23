@@ -236,6 +236,21 @@ int main()
         pthread_join(processes[i], NULL);
     }
     printf("\n All Programs Successefully Executed :) ");
+
+    //releasing memory
+    free(safe_sequence);
+    free(avalible);
+    for (int i = 0; i < no_of_process; i++)
+    {
+        free(max[i]);
+        free(currently_allocated[i]);
+        free(need[i]);
+    }
+
+    free(max);
+    free(currently_allocated);
+    free(need);
+
     sleep(4);
 }
 void *thread_function(void *args)
