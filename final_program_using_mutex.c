@@ -220,8 +220,6 @@ int main()
     }
     printf("\n\n Creating and Executing %d Threads One for Each Process In Safe Sequence ", no_of_process);
     pthread_t processes[no_of_process]; // threads ids
-    //pthread_attr_t attr;
-    //pthread_attr_init(&attr);
     //creating threads
     int process_numbers[no_of_process];
     for (int i = 0; i < no_of_process; i++)
